@@ -1,17 +1,19 @@
-cat << 'EOF' > buildspec.yml
 version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      python: 3.8
     commands:
-      - echo "Nothing to install"
+      - echo Installing dependencies...
+      - pip install -r requirements.txt
   build:
     commands:
-      - echo "Nothing to build"
+      - echo Build started...
   post_build:
     commands:
-      - echo "Build completed on `date`"
+      - echo Build completed successfully.
+
 artifacts:
   files:
     - '**/*'
-EOF
