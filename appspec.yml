@@ -1,6 +1,3 @@
-cd ~/simple-web-app
-
-cat << 'EOF' > appspec.yml
 version: 0.0
 os: linux
 files:
@@ -11,4 +8,4 @@ hooks:
     - location: scripts/restart_server.sh
       timeout: 300
       runas: root
-EOF
+
